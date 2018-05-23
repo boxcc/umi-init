@@ -50,7 +50,7 @@ export default function request(url, options) {
     if (!(newOptions.body instanceof FormData)) {
       newOptions.headers = {
         Accept: 'application/json',
-        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Type': 'application/json; charset=utf-8;',
         ...newOptions.headers,
       };
       newOptions.body = JSON.stringify(newOptions.body);
@@ -71,25 +71,25 @@ export default function request(url, options) {
       }
       return response.json();
     })
-    .catch((e) => {
-      const status = e.name;
-      if (status === 401) {
-        window.g_app._store.dispatch({
-          type: 'login/logout',
-        });
-        return;
-      }
-      if (status === 403) {
-        router.push('/403');
-        return;
-      }
-      if (status <= 504 && status >= 500) {
-        router.push('/500');
-        return;
-      }
-      if (status >= 404 && status < 422) {
-        router.push('/404');
-        return;
-      }
-    });
+    // .catch((e) => {
+    //   const status = e.name;
+    //   if (status === 401) {
+    //     window.g_app._store.dispatch({
+    //       type: 'login/logout',
+    //     });
+    //     return;
+    //   }
+    //   if (status === 403) {
+    //     router.push('/403');
+    //     return;
+    //   }
+    //   if (status <= 504 && status >= 500) {
+    //     router.push('/500');
+    //     return;
+    //   }
+    //   if (status >= 404 && status < 422) {
+    //     router.push('/404');
+    //     return;
+    //   }
+    // });
 }

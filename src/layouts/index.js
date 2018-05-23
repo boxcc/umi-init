@@ -4,13 +4,13 @@ import { IntlProvider } from 'react-intl';
 import withRouter from 'umi/withRouter';
 import dynamic from 'umi/dynamic';
 import { connect } from 'dva';
-// import { LocaleProvider } from 'antd';
-// import zhCN from 'antd/lib/locale-provider/zh_CN';
+import { LocaleProvider } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 
 // Import i18n messages
 import { translationMessages } from 'src/i18n';
 
-const mapStateToProps = ({ global }) => {
+function mapStateToProps({ global }) {
   return {
     locale: global.locale,
   };
@@ -18,13 +18,6 @@ const mapStateToProps = ({ global }) => {
 
 const app = (messages) => withRouter(
   connect(mapStateToProps)(({ children, location, locale }) => {
-    // const { pathname } = location;
-    // let LayoutComponent = BasicLayout;
-    // if (pathToRegexp('/user(.*)').test(pathname)) {
-    //   LayoutComponent = UserLayout;
-    // } else {
-    //   LayoutComponent = BasicLayout;
-    // }
 
     return (
       <IntlProvider
@@ -32,9 +25,9 @@ const app = (messages) => withRouter(
         key={locale}
         messages={messages[locale]}
       >
-        
-        <div location={location}>{children}</div>
-
+        <LocaleProvider locale={locale === 'zh' ? zhCN : {}}>
+          {children}
+        </LocaleProvider>
       </IntlProvider>
     );
   })

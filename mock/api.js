@@ -1,14 +1,14 @@
 import { parse } from 'url';
 
 const titles = [
-  'Alipay',
-  'Angular',
-  'Ant Design',
-  'Ant Design Pro',
-  'Bootstrap',
-  'React',
-  'Vue',
-  'Webpack',
+  'Praesent eu nulla at sem molestie sodales. Mauris',
+  'pharetra. Nam ac nulla. In tincidunt congue turpis',
+  'non quam. Pellentesque habitant morbi tristique senectus et',
+  'tristique aliquet. Phasellus fermentum convallis ligula. Donec luctus',
+  'Quisque ornare tortor at risus. Nunc ac sem',
+  'nascetur ridiculus mus. Proin vel nisl. Quisque fringilla',
+  'dignissim magna a tortor. Nunc commodo auctor velit',
+  'aliquet, metus urna convallis erat, eget tincidunt dui',
 ];
 const avatars = [
   'https://gw.alipayobjects.com/zos/rmsportal/WdGqmHpayyMjiEhcKoVE.png', // Alipay
@@ -41,24 +41,24 @@ const covers = [
   'https://gw.alipayobjects.com/zos/rmsportal/gLaIAoVWTtLbBWZNYEMg.png',
 ];
 const desc = [
-  '那是一种内在的东西， 他们到达不了，也无法触及的',
-  '希望是一个好东西，也许是最好的，好东西是不会消亡的',
-  '生命就像一盒巧克力，结果往往出人意料',
-  '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
-  '那时候我只会想自己想要什么，从不想自己拥有什么',
+  'lectus justo eu arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec, diam. Duis mi enim, condimentum eget, volutpat ornare,',
+  'et, rutrum eu, ultrices sit amet, risus. Donec nibh enim, gravida sit amet, dapibus id, blandit at, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+  'dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa',
+  'dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed dui. Fusce aliquam, enim nec tempus scelerisque, lorem ipsum sodales purus, in molestie tortor nibh sit amet',
+  'mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat',
 ];
 
 const user = [
-  '付小小',
-  '曲丽丽',
-  '林东东',
-  '周星星',
-  '吴加好',
-  '朱偏右',
-  '鱼酱',
-  '乐哥',
-  '谭小仪',
-  '仲尼',
+  'Richard Christian',
+  'Cruz Perry',
+  'Phillip Mccoy',
+  'Chase Goodwin',
+  'Reese Avila',
+  'Kenyon Lester',
+  'Arthur Garcia',
+  'Cyrus Meyers',
+  'Kieran Macdonald',
+  'Arthur Garcia',
 ];
 
 export function fakeList(count) {
@@ -77,25 +77,25 @@ export function fakeList(count) {
       updatedAt: new Date(new Date().getTime() - (1000 * 60 * 60 * 2 * i)),
       createdAt: new Date(new Date().getTime() - (1000 * 60 * 60 * 2 * i)),
       subDescription: desc[i % 5],
-      description: '在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。',
+      description: 'montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus. Nullam velit dui, semper et, lacinia vitae, sodales at, velit. Pellentesque ultricies',
       activeUser: Math.ceil(Math.random() * 100000) + 100000,
       newUser: Math.ceil(Math.random() * 1000) + 1000,
       star: Math.ceil(Math.random() * 100) + 100,
       like: Math.ceil(Math.random() * 100) + 100,
       message: Math.ceil(Math.random() * 10) + 10,
-      content: '段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。',
+      content: 'pellentesque eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam',
       members: [
         {
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ZiESqWwCXBRQoaPONSJe.png',
-          name: '曲丽丽',
+          name: 'Carter Rodriguez',
         },
         {
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/tBOxZPlITHqwlGjsJWaF.png',
-          name: '王昭君',
+          name: 'Kelly Bush',
         },
         {
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/sBxjgqiuHMGRkIjqlQCd.png',
-          name: '董娜娜',
+          name: 'Damian Chavez',
         },
       ],
     });

@@ -1,31 +1,33 @@
 {
-  "name": "umi-pro",
+  "name": "umi-init",
   "version": "0.0.1",
-  "description": "ant design pro by umi",
+  "description": "umi project init",
   "private": true,
   "scripts": {
-    "start": "umi dev",
-    "build": "umi build",
+    "start": "cross-env COMPILE_ON_DEMAND=none umi dev",
+    "build": "cross-env BASE_URL=/ umi build",
     "generate": "plop --plopfile internals/generators/index.js",
     "lint": "eslint --ext .js src test",
     "precommit": "npm run lint",
     "extract-intl": "babel-node --presets @babel/preset-env,@babel/preset-stage-0 -- ./internals/scripts/extract-intl.js"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0-beta.46",
+    "@babel/polyfill": "^7.0.0-beta.47",
     "classnames": "^2.2.5",
     "intl": "^1.2.5",
+    "moment": "^2.21.0",
     "path-to-regexp": "^2.2.0",
     "qs": "^6.5.1",
     "react-intl": "^2.4.0",
     "url-polyfill": "^1.0.11"
   },
   "devDependencies": {
-    "@babel/node": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "@babel/preset-react": "^7.0.0-beta.46",
-    "@babel/preset-stage-0": "^7.0.0-beta.46",
+    "@babel/node": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/preset-react": "^7.0.0-beta.47",
+    "@babel/preset-stage-0": "^7.0.0-beta.47",
     "babel-plugin-react-intl": "^2.4.0",
+    "cross-env": "^5.1.4",
     "eslint": "^4.14.0",
     "eslint-config-umi": "^0.1.1",
     "eslint-plugin-flowtype": "^2.34.1",
@@ -37,8 +39,8 @@
     "node-plop": "^0.13.0",
     "plop": "^2.0.0",
     "shelljs": "^0.8.1",
-    "umi": "^1.2.6",
-    "umi-plugin-dll": "^0.1.4",
-    "umi-plugin-dva": "^0.6.4"
+    "umi": "^1.3.3",
+    "umi-plugin-dll": "^0.2.1",
+    "umi-plugin-dva": "^0.7.2"
   }
 }
